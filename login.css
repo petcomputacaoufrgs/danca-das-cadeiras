@@ -11,10 +11,6 @@ nav {
 	color: white;
 }
 
-.navbar-header {
-	margin-left: 3%;
-}
-
 form {
 	margin-top: 45px;
 }
@@ -29,7 +25,7 @@ form {
 }
 
 #cic-button {
-	margin-top: 10px;
+	margin-top: 45px;
 	margin-bottom: 25px;
 }
 
@@ -42,16 +38,6 @@ form {
 	max-width: 75%;
 }
 
-#courses-buttons-div {
-
-}
-
-#nologin-text {
-	margin-top: 35px;
-	display: block;
-	margin-left: 10%;
-}
-
 #courses-buttons-div button {
 	font-size: 2em;
 	white-space: normal;
@@ -60,4 +46,8 @@ form {
 	margin-right: auto;
 	width: 80%;
 	height: 130px;
+}
+
+#courses-buttons-div a{ /*the courses buttons must not be underlined when mouse hover over them*/
+	text-decoration: none;
 }
