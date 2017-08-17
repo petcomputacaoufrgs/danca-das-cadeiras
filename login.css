@@ -3,51 +3,69 @@ body {
 	font-family: 'Lato';
 }*/
 
+/* navbar related*/
 nav {
 	background-color: #489FDF;
+}
+
+.navbar-header {
+	margin-left: 2%;
 }
 
 .navbar-brand {
 	color: white;
 }
+/*end navbar*/
 
-form {
-	margin-top: 45px;
-}
-
+/* row */
 .row {
 	margin-top: 100px;
 	height: 400px;
 }
 
-#login-form-div {
-	border-right: 2px solid black;
-}
+	/*login form related*/
+	form {
+		margin-top: 45px;
+	}
 
-#cic-button {
-	margin-top: 45px;
-	margin-bottom: 25px;
-}
+	#user-email, #user-password {
+		max-width: 75%;
+	}
 
-#ecp-button {
-	margin-top: 25px;
-	margin-bottom: 45px;
-}
+	#login-form-div {
+		border-right: 1px solid gray;
+		borde
+	}
 
-#user-email, #user-password {
-	max-width: 75%;
-}
 
-#courses-buttons-div button {
-	font-size: 2em;
-	white-space: normal;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 80%;
-	height: 130px;
-}
+	/*courses buttons related*/
+	#courses-buttons-div {
+		border-left: 1px solid gray;
+		border-
+	}
 
-#courses-buttons-div a{ /*the courses buttons must not be underlined when mouse hover over them*/
-	text-decoration: none;
-}
+	#courses-buttons-div button {
+		font-size: 2em;
+		white-space: normal;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+		height: 130px;
+	}
+
+	/*remove the underline from courses buttons when mouse hover over them*/
+	#courses-buttons-div a{ 
+		text-decoration: none;
+	}
+
+	#cic-button {
+		margin-top: 45px;
+		margin-bottom: 25px;
+	}
+
+	#ecp-button {
+		margin-top: 25px;
+		margin-bottom: 45px;
+	}
+/*end row*/
