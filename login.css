@@ -1,21 +1,35 @@
-.row {
-	height: 400px;
+/*@import url('https://fonts.googleapis.com/css?family=Lato');
+body {
+	font-family: 'Lato';
+}*/
+
+nav {
+	background-color: #489FDF;
 }
 
-.row div:nth-of-type(2) {
-	background-color: pink;
+.navbar-brand {
+	color: white;
+}
+
+.navbar-header {
+	margin-left: 3%;
+}
+
+form {
+	margin-top: 45px;
+}
+
+.row {
+	margin-top: 100px;
+	height: 400px;
 }
 
 #login-form-div {
 	border-right: 2px solid black;
 }
 
-#courses-buttons-div {
-
-}
-
 #cic-button {
-	margin-top: 45px;
+	margin-top: 10px;
 	margin-bottom: 25px;
 }
 
@@ -24,11 +38,26 @@
 	margin-bottom: 45px;
 }
 
+#user-email, #user-password {
+	max-width: 75%;
+}
+
+#courses-buttons-div {
+
+}
+
+#nologin-text {
+	margin-top: 35px;
+	display: block;
+	margin-left: 10%;
+}
+
 #courses-buttons-div button {
+	font-size: 2em;
+	white-space: normal;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 80%;
 	height: 130px;
 }
-
