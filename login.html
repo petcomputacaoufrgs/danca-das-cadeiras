@@ -2,39 +2,46 @@
 <html>
 <head>
 	<!-- utf-8 -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="login.css">
 	<title>Dança das Cadeiras - Login</title>
 </head>
 <body>
 	<nav class="navbar navbar-default">
-		<div class="container">
-			<div class="navbar-header">
-				<a href="#" class="navbar-brand">Dança das Cadeiras</a>
-			</div>
+		<!-- <div class="container"> -->
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand"><i class="fa fa-address-card" aria-hidden="true"></i> Dança das Cadeiras</a>
+		</div>
+		<!-- </div> -->
 	</nav>
-
-
-
-
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6" id="login-form-div">
-				<div class="form-group">
-					<p>Login:</p>
-					<div>
-						<input type="text" id="username" placeholder= "Email">
-						<input type="password" id="password" placeholder="Senha">
+				<form>
+					<div class="form-group">
+						<p>Login:</p>
+						<input type="email" id="user-email"  class="form-control" placeholder= "Email" required>
 					</div>
-					<input type="checkbox" id="remember-me" name="remember-me">
-					<label for="remember-me">Mantenha logado</label>
-					<button class="btn btn-success" id="login-button">Login</button>
-					<p>Se você não se registrou ainda, clique <a href="#">aqui</a></p>
-				</div>
+					<div class="form-group">
+						<input type="password" id="user-password" class="form-control" placeholder="Senha"  pattern=".{5,20}" required title="Password must be between 5 and 20 characters" required>
+					</div>
+					<div class="form-group">
+					<label>
+						<input type="checkbox" id="remember-me">
+						Manter conectado
+					</label>
+					</div>
+					<div class="form-group">
+						<button class="btn btn-success" id="login-button">Login</button>
+					</div>
+						<p>Se você não se registrou ainda, clique <a href="#">aqui</a></p>
+				</form>
 			</div>
 			<div class="col-sm-6" id="courses-buttons-div">
-				<button id="cic-button" class="btn">Ciência da Computação</button>
-				<button id="ecp-button" class="btn">Engenharia da Computação</button>
+				<p id="nologin-text">Prosseguir sem login:</p>
+				<a href="#"><button id="cic-button" class="btn btn-primary"><p>Ciência da Computação</button></a>
+				<a href="#"><button id="ecp-button" class="btn btn-primary">Engenharia da Computação</button></a>
 			</div>
 		</div>
 		
