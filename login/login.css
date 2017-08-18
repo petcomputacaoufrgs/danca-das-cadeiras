@@ -3,24 +3,6 @@ body {
 	font-family: 'Lato';
 }*/
 
-/* navbar related*/
-nav {
-	background-color: #262626;
-}
-
-.navbar-header {
-	margin-left: 2%;
-}
-
-.navbar-brand {
-	color: white;
-}
-
-.navbar-header a:hover {
-	color: #EEEEEE;
-}
-/*end navbar*/
-
 /* row */
 .row {
 	margin-top: 100px;
@@ -44,6 +26,11 @@ nav {
 		margin-right: 20px;
 	}
 
+	.form-group .btn {
+		background-color: #262626; /*#4F9969;*/
+		color: white;
+	}
+
 	/*courses buttons related*/
 	#courses-buttons-div {
 		border-left: 1px solid gray;
@@ -57,7 +44,6 @@ nav {
 		margin-right: auto;
 		width: 80%;
 		height: 130px;
-		border: 1px solid #333333;
 		border-radius: 15px;
 	}
 
@@ -67,7 +53,7 @@ nav {
 	}
 
 	#cic-button, #ecp-button {
-		background-color: #520089;
+		background-color: #910505; /*#2073CC;*/
 		color: white;
 	}
 
