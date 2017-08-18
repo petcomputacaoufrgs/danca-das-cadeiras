@@ -1,0 +1,27 @@
+body {
+	background-color: #DEDEDE;
+}
+
+/* navbar related*/
+nav {
+	background-color: #262626;
+}
+
+.navbar-header {
+	margin-left: 2%;
+}
+
+.navbar-brand {
+	color: white;
+}
+
+.navbar-header a:hover {
+	color: #EEEEEE;
+	text-decoration: underline;
+	text-decoration-color: #EEEEEE;
+}
+/*navbar end*/
+
+.navbar-brand i {
+	margin-right: 0.6em;
+}
