@@ -1,0 +1,20 @@
+{
+  "name": "danca-das-cadeiras",
+  "version": "0.0.1",
+  "description": "This web service guides students in choosing their classes for the semester",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://PedroZardo@bitbucket.org/Caio_Rodrigues/danca-das-cadeiras.git"
+  },
+  "keywords": [
+    "ddc",
+    "danca-das-cadeiras"
+  ],
+  "author": "Caio Rodrigues, Henrique Silva, Luma Besera, Pedro Cardouzo",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Caio_Rodrigues/danca-das-cadeiras#readme"
+}
