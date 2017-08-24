@@ -4,16 +4,12 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../default_styles/base_layout.css">
-	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="css/base_styling.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<title>Dança das Cadeiras - Login</title>
 </head>
 <body>
-	<nav class="navbar navbar-default">
-		<div class="navbar-header">
-			<a href="" class="navbar-brand"><i class="fa fa-address-card" aria-hidden="true"></i>Dança das Cadeiras</a>
-		</div>
-	</nav>
+	<% include partials/navbar-unlogged.html %>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6" id="login-form-div">
@@ -33,7 +29,7 @@
 					</div>
 					<div class="form-group">
 						<button class="btn" id="login-button">Entrar</button>
-						<a href="../register/register.html"><button class="btn" id="signup-button" type="button">Cadastre-se</button></a>
+						<a href="./register"><button class="btn" id="signup-button" type="button">Cadastre-se</button></a>
 					</div>
 						<a href="#">Esqueci minha senha</a>
 				</form>
@@ -44,6 +40,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="login.js" type="text/javascript"></script>
+	<script src="scripts/login.js" type="text/javascript"></script>
 </body>
 </html>
