@@ -5,11 +5,11 @@
 // [type]: String containing the type of input. If it is an email, it receives special
 //         treatment, removing everything from @ onwards and validating the rest.
 // returns true if input is valid, false otherwise
-function isValidInput(input, allowedCharacters, type = "any"){
+function isValidInput(input, allowedCharacters, type){
 	input = input.toLowerCase();
 
-	
-	if(type == "email")
+
+	if(type === "email")
 		input = input.split('@')[0];
 
 	for(let i in input){

@@ -24,19 +24,19 @@
 				<div class="form-group">
 					<input type="text" id="user-name" name="username" class="form-control" placeholder="Nome Completo" required>
 					<div class="alert alert-danger" id="invalid-name">
-						Nome de usuário inválido. É permitido usar apenas letras de a-z, A-Z, numeros de 0-9, e os caracteres ._-
+						Nome de usuário inválido. É permitido usar apenas letras de a-z, A-Z, numeros de 0-9, e os caracteres <span id="username-special-characters"></span>
 					</div>
 				</div>
 				<div class="form-group">
 					<input type="email" id="user-email" name="email"  class="form-control" placeholder= "Endereço de Email" required>
 					<div class="alert alert-danger" id="invalid-email">
-						Email inválido. É permitido usar apenas letras de a-z, A-Z, numeros de 0-9, e os caracteres ._-
+						Email inválido. É permitido usar apenas letras de a-z, A-Z, numeros de 0-9, e os caracteres <span id="email-special-characters"></span>
 					</div>
 				</div>
 				<div class="form-group">
 					<input type="password" id="user-password" name="password" class="form-control" placeholder="Senha (6-30 dígitos)"  pattern=".{6,30}" title="Password must be between 6 and 30 characters" required>
 					<div class="alert alert-danger" id="invalid-password">
-						Senha inválida. É permitido usar apenas letras de a-z, A-Z, numeros de 0-9, e os caracteres ._-!@#$&
+						Senha inválida. É permitido usar apenas letras de a-z, A-Z, numeros de 0-9, e os caracteres <span id="password-special-characters"></span>
 					</div>
 				</div>
 				<div class="form-group">
