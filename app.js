@@ -1,6 +1,8 @@
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
+var express 	= require("express"),
+	app 		= express(),
+	bodyParser 	= require("body-parser"),
+	passport 	= require("passport");
+
 
 var __viewsdir = __dirname + "/views/";
 

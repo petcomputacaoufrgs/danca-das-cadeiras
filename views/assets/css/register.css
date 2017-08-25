@@ -33,3 +33,7 @@ p {
 	background-color: #262626;
 	color: white;
 }
+
+.alert-danger {
+	display: none;
+}
