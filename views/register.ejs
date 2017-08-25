@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/base_styling.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<title>Dança das Cadeiras - Registrar</title>
+</head>
+<body>
+	<% include partials/navbar-unlogged.html %>
+	<div class="row">
+		<div class="col-md-2 col-sm-0"></div>
+		<div class="col-md-8 col-sm-12">
+			<form class="container" action="" method="post">
+				<div class="form-group">
+					<div class="jumbotron">
+						<p>Preencha todas as informações para se cadastrar</p>
+						<hr>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="text" id="user-name" name="user-name" class="form-control" placeholder="Nome Completo" required>
+					<div class="invalid-feedback">
+						Username contain invalid characters
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="email" id="user-email" name="user-email"  class="form-control" placeholder= "Endereço de Email" required>
+					<div class="invalid-feedback">
+						The email is already in use
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="password" id="user-password" name="user-password" class="form-control" placeholder="Senha (6-30 dígitos)"  pattern=".{6,30}" title="Password must be between 6 and 30 characters" required>
+				</div>
+				<div class="invalid-feedback">
+					Password is invalid
+				</div>
+				<div class="form-group">
+					<select class="custom-select" name="course">
+						<option>Ciência da Computação</option>
+						<option>Engenharia da Computação</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<div class="btn-group" data-toggle="buttons">
+						<span id="internship-header">Estágio/bolsa (horas):</span>
+						<label class="custom-control custom-radio">
+							<input name="internship" type="radio" class="custom-control-input" checked>
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Não faço</span>
+						</label>
+						<label class="custom-control custom-radio">
+							<input name="internship" type="radio" class="custom-control-input">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">40h</span>
+						</label>
+						<label class="custom-control custom-radio">
+							<input name="internship" type="radio" class="custom-control-input">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">30h</span>
+						</label>
+						<label class="custom-control custom-radio">
+							<input name="internship" type="radio" class="custom-control-input">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">20h</span>
+						</label>
+						<label class="custom-control custom-radio">
+							<input name="internship" type="radio" class="custom-control-input">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">16h</span>
+						</label>
+						<label class="custom-control custom-radio">
+							<input name="internship" type="radio" class="custom-control-input">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">menos que 16h</span>
+						</label>
+					</div>
+				</div>
+				<button class="btn" id="submit">Enviar</button>
+			</form>
+		</div>
+	</div>
+	<script src="register.js" type="text/javascript"></script>
+</body>
+</html>

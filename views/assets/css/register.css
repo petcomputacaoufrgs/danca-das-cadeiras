@@ -1,0 +1,35 @@
+.jumbotron {
+	color: white;
+	background-color: #910505;
+	width: 100%;
+	height: 100px;
+	padding-top:20px;
+}
+
+.jumbotron p {
+	text-align: center;
+}
+
+hr {
+	border: 0; 
+	height: 1px; 
+	background-image: -webkit-linear-gradient(left, #f1f1f1, #8c8b8b, #f1f1f1);
+	margin: 20px 20px;
+}
+
+p {
+	font-size: 1.6em;
+}
+
+.container {
+	margin-top: 80px;
+}
+
+#internship-header {
+	padding-right: 1em;
+}
+
+#submit {
+	background-color: #262626;
+	color: white;
+}

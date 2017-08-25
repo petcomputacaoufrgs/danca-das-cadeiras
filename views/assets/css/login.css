@@ -1,0 +1,69 @@
+/*@import url('https://fonts.googleapis.com/css?family=Lato');
+body {
+	font-family: 'Lato';
+}*/
+
+/* row */
+.row {
+	margin-top: 100px;
+	height: 400px;
+}
+
+	/*login form related*/
+	form {
+		margin-top: 45px;
+	}
+
+	#user-email, #user-password {
+		max-width: 75%;
+	}
+
+	#login-form-div {
+		border-right: 1px solid gray;
+	}
+
+	#login-button {
+		margin-right: 20px;
+	}
+
+	.form-group .btn {
+		background-color: #262626; /*#4F9969;*/
+		color: white;
+	}
+
+	/*courses buttons related*/
+	#courses-buttons-div {
+		border-left: 1px solid gray;
+	}
+
+	#courses-buttons-div button {
+		font-size: 2em;
+		white-space: normal;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+		height: 130px;
+		border-radius: 15px;
+	}
+
+	/*remove the underline from courses buttons when mouse hover over them*/
+	#courses-buttons-div a{ 
+		text-decoration: none;
+	}
+
+	#cic-button, #ecp-button {
+		background-color: #910505; /*#2073CC;*/
+		color: white;
+	}
+
+	#cic-button {
+		margin-top: 45px;
+		margin-bottom: 25px;
+	}
+
+	#ecp-button {
+		margin-top: 25px;
+		margin-bottom: 45px;
+	}
+/*end row*/
