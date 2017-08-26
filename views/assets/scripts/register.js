@@ -1,13 +1,12 @@
-
-	var usernameAllowedCharacters = ".-_",
-		emailAllowedCharacters = ".-_",
-		passwordAllowedCharacters = ".-_!@#$&";
+var usernameAllowedCharacters = ".-_",
+	emailAllowedCharacters = ".-_",
+	passwordAllowedCharacters = ".-_!@#$&";
 // puts the special allowed caracters in the warning message of its respective input
-	$('#username-special-characters').text(usernameAllowedCharacters); 
-	$('#email-special-characters').text(emailAllowedCharacters);
-	$('#password-special-characters').text(passwordAllowedCharacters);
+$('#username-special-characters').text(usernameAllowedCharacters); 
+$('#email-special-characters').text(emailAllowedCharacters);
+$('#password-special-characters').text(passwordAllowedCharacters);
 
-$(document).ready(function(){
+$(document).ready(function(){ // when the rendered html fully loads
 
 	$('form').submit(function(event){
 
@@ -44,15 +43,3 @@ $(document).ready(function(){
 
 	});
 });
-// a->z, 0-> . _ - !@#$&
-// - _ .
-
-// window.addEventListener('load', function{
-// 	var form = document.querySelector('form');
-// 	form.addEventListener('submit', function(event){
-// 		if (form.checkValidity() == false) {
-// 	        event.preventDefault();
-// 	        event.stopPropagation();
-// 	     }
-// 	}, false);
-// }, false);
