@@ -4,13 +4,11 @@ var express 	= require("express"),
 	passport 	= require("passport");
 
 
-var __viewsdir = __dirname + "/views/";
-
 app.use(bodyParser.urlencoded({extended: true}));
 
 // tells express to look for things in the public folder aswell
 // by default it will only look at the views folder
-app.use(express.static( __viewsdir + "assets/")); 
+app.use(express.static("views/assets/")); 
 
 // tells express to expect .ejs as default files on .render() and paths, unless otherwise specified;
 app.set("view engine", "ejs");
