@@ -5,7 +5,7 @@ body {
 /* navbar related*/
 nav.navbar {
 	padding: 0 4%;
-	height: 56px;
+	height: 56px; /* every height-related property will have a comment at the side with *nav-height* marker */
 	background-color: #262626;
 	color: white;
 	font-size: 1.3em;
@@ -42,28 +42,28 @@ nav.navbar {
 		color: white;
 		text-decoration: none;
 		display: block;
-		padding: 12.5px 15px;
+		padding: 12.5px 15px; /*nav-height*/ /* the first number is the spacing between top of screen and the dropdown text */
 	}
 
 	a.navbar-login.open {
 		background-color: #333333;
 	}
 
-	/* position related */
+	/* form positioning and size related */
 	div.dropdown-form {
 		display: none; /* the whole div starts invisible -> responsible for the whole page sliding down animation */
-		float:top;
-		margin-top:0;
-		height: 75px;
+		float:top;	   /* form is glued to the navbar */
+		margin-top:0; 
+		height: 80px; /*nav-height*/ /* how much the div slides down */ 
 	}
 
-	div.spacing {
-		display: none; /* also has to start invisible -> resposible for the form sliding down animation */
-		min-width: 200px;
+	/* form initial state, positioning and sizing */
+	div.positioning {
+		display: none; /* also has to start invisible */
 		width: 35%;
-		position: fixed; 
-	   	top: 56px; /* navbar height */
-	   	right: 0; /* glued to the right */ 
+		min-width: 300px; /* min form width */
+		position: fixed; /* position of the dropdown form */
+		right: 0; /* glued to the right */ 
 	}
 
 	form.dropdown-form {

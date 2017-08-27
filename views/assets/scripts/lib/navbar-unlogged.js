@@ -23,16 +23,16 @@ $.prototype.containsClasses = function(){
 
 var time = 150; // time in ms untill slide is complete.
 
-var dropdownButton 		= $('.navbar-login.dropdown-toggle'),
-	dropdownForm 		= $("div.dropdown-form"),
-	dropdownFormSpacing	= $("div.spacing");
+var dropdownButton 			= $('.navbar-login.dropdown-toggle'),
+	dropdownForm 			= $("div.dropdown-form"),
+	dropdownFormPositioning	= $("div.positioning");
 
 
 $(document).ready(function(){
 
 	$('body').click(function(){
 		dropdownForm.slideUp(time);
-		dropdownFormSpacing.slideUp(time);	
+		dropdownFormPositioning.slideUp(time);	
 		dropdownButton.removeClass("open");
 	});
 
@@ -40,7 +40,7 @@ $(document).ready(function(){
     	$(this).toggleClass("open");
 
    		dropdownForm.slideToggle(time);
-   		dropdownFormSpacing.slideToggle(time);
+   		dropdownFormPositioning.slideToggle(time);
    		
    		if($(this).containsClasses("open"))
    			$("form.dropdown-form input:first-of-type").trigger("focus");
