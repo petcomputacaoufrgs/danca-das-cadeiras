@@ -83,6 +83,7 @@ nav.navbar {
 
 	.alert-custom {
 		background-color: #333;
+		border-radius: 0;
 	}
 
 	#dropdown-submit {
