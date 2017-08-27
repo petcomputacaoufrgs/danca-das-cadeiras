@@ -28,40 +28,59 @@ nav {
 }
 
 
-div.dropdown-form {
-	float:top;
-	margin-top:0;
-	height: 75px;
-}
+/* navbar login dropdown related */
+	
+	/* dropdown button styling */
+	#login-dropdown,  #login-dropdown:focus {
+		background-color: #262626;
+		color: white;
+	}
 
-.alert-custom {
-	background-color: #333;
-}
+	/* position related */
+	div.dropdown-form {
+		display: none; /* the whole div starts invisible -> responsible for the whole page sliding down animation */
+		float:top;
+		margin-top:0;
+		height: 75px;
+	}
 
-input.dropdown-input, input.dropdown-input:focus {
-    background-color: #444;
-    color: #CCC;
-}
+	div.spacing {
+		display: none; /* also has to start invisible -> resposible for the form sliding down animation */
+		min-width: 200px;
+		width: 35%;
+		position: fixed; 
+	   	top: 56px; /* navbar height */
+	   	right: 0; /* glued to the right */ 
+	}
 
-form.dropdown-form {
-	display: none;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-bottom: 50px;
-	height: 145px;
-	display: inline-block;
-	width: 100%;
-}
+	form.dropdown-form {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-bottom: 50px;
+		height: 145px;
+		display: inline-block;
+		width: 100%;
+	}
 
-.dropdown-form.hide {
-	display: none;
-}
+	/* input, background and button color */
+	input.dropdown-input, input.dropdown-input:focus {
+	    background-color: #444;
+	    color: #CCC;
+	}
 
-#dropdown-submit {
-	margin-top: 4px;
-	background-color: #444;
-	color: #CCC;
-	border: none;
-}
+	.alert-custom {
+		background-color: #333;
+	}
 
+	#dropdown-submit {
+		margin-top: 4px;
+		background-color: #444;
+		color: #CCC;
+		border: none;
+	}
+
+	/* autofill background color */
+	input:-webkit-autofill {
+	    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 22, 255, .5) inset;
+	}
 /*navbar end*/
