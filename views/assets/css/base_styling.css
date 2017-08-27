@@ -3,14 +3,12 @@ body {
 }
 
 /* navbar related*/
-nav {
+nav.navbar {
+	padding: 0 4%;
+	height: 56px;
 	background-color: #262626;
 	color: white;
 	font-size: 1.3em;
-}
-
-.navbar-header {
-	margin-left: 2%;
 }
 
 .navbar-brand {
@@ -30,10 +28,25 @@ nav {
 
 /* navbar login dropdown related */
 	
-	/* dropdown button styling */
-	#login-dropdown,  #login-dropdown:focus {
-		background-color: #262626;
+	/* dropdown "button" styling */
+	ul.nav.navbar-nav.navbar-right {
+		display: block;
+		height: 100%;
+	}
+
+	li.dropdown {
+		height: 100%;
+	}
+
+	a.navbar-login {
 		color: white;
+		text-decoration: none;
+		display: block;
+		padding: 12.5px 15px;
+	}
+
+	a.navbar-login.open {
+		background-color: #333333;
 	}
 
 	/* position related */
