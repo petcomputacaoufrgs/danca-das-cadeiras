@@ -22,8 +22,46 @@ nav {
 	text-decoration: underline;
 	text-decoration-color: #EEEEEE;
 }
-/*navbar end*/
 
 .navbar-brand i {
 	margin-right: 0.6em;
 }
+
+
+div.dropdown-form {
+	float:top;
+	margin-top:0;
+	height: 75px;
+}
+
+.alert-custom {
+	background-color: #333;
+}
+
+input.dropdown-input, input.dropdown-input:focus {
+    background-color: #444;
+    color: #CCC;
+}
+
+form.dropdown-form {
+	display: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 50px;
+	height: 145px;
+	display: inline-block;
+	width: 100%;
+}
+
+.dropdown-form.hide {
+	display: none;
+}
+
+#dropdown-submit {
+	margin-top: 4px;
+	background-color: #444;
+	color: #CCC;
+	border: none;
+}
+
+/*navbar end*/
