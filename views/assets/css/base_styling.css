@@ -58,7 +58,7 @@ nav.navbar {
 		display: none; /* the whole div starts invisible -> responsible for the whole page sliding down animation */
 		float:top;	   /* form is glued to the navbar */
 		margin-top:0; 
-		height: 80px; /*nav-height*/ /* how much the div slides down */ 
+		height: 80px; /*nav-height*/ /* how much the div below slides down */ 
 	}
 
 	/* form initial state, positioning and sizing */
