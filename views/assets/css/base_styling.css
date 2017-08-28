@@ -5,7 +5,8 @@ body {
 /* navbar related*/
 nav.navbar {
 	padding: 0 4%;
-	height: 56px; /* every height-related property will have a comment at the side with *nav-height* marker */
+	height: 56px; /*nav-height*/ /* every height-related property will have a comment at the side with *nav-height* marker */
+								 /* therefore, if you change this, change them aswell please*/
 	background-color: #262626;
 	color: white;
 	font-size: 1.3em;
@@ -43,6 +44,9 @@ nav.navbar {
 		text-decoration: none;
 		display: block;
 		padding: 12.5px 15px; /*nav-height*/ /* the first number is the spacing between top of screen and the dropdown text */
+		/* for the first number on padding, you must get the size of a.navbar-login, then do
+		   height(nav.navbar) - height(a.navbar-login), then divide by 2. 
+		   last checked height(a.navbar-login) = 31px (probably still the same) */
 	}
 
 	a.navbar-login.open {
