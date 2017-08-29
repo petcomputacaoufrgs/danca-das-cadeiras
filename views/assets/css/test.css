@@ -6,3 +6,13 @@
 body div p {
 	font-size: 0.6em;
 }
+
+.canvas {
+	overflow: scroll; 
+	width: 500px; 
+	height: 210px;
+}
+
+.canvas-inner {
+	width: 10000px;
+}

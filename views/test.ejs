@@ -7,15 +7,17 @@
 </head>
 <body>
 	<div class="canvas">
-	<% for(var i=0; i < 5; i++){ %>
-		<div class="discipline btn btn-primary btn-lg" height="40px" width="80px" style="position: relative; left: <%= i*3+2 %>%; top: <%= 50 %>px;">
-			<span class="discipline-code">INF00000</span>
-			<br>
-			<span class="discipline-name">Nome da Cadeira</span>
-			<br>
-			<span class="discipline-difficulty">HARD-ish</span>
+		<div class="canvas-inner">	
+		<% for(var i=0; i < 5; i++){ %>
+			<div class="discipline btn btn-primary btn-lg" height="40px" width="80px" style="position: relative; left: <%= i*3+2 %>%; top: <%= 50 %>px;">
+				<span class="discipline-code">INF00000</span>
+				<br>
+				<span class="discipline-name">Nome da Cadeira</span>
+				<br>
+				<span class="discipline-difficulty">HARD-ish</span>
+			</div>
+		<% } %>
 		</div>
-	<% } %>
 	</div>
 </body>
 </html>
