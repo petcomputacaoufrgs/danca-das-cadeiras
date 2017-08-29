@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/test.css">
 	<title>Test</title>
 </head>
 <body>
 	<div class="canvas">
-	<% for(var i=0; i < 5; i++) %>
-		<div class="discipline btn btn-lg" height="100px" width="200px" style="position: relative; left: <%= i*100+50 %>px; top: <%= 50 %>px;">
-			<p class="discipline-code">INF00000</p>
-			<p class="discipline-name">Nome da Cadeira</p>
-			<p class="discipline-difficulty">HARD-ish</p>
+	<% for(var i=0; i < 5; i++){ %>
+		<div class="discipline btn btn-primary btn-lg" height="40px" width="80px" style="position: relative; left: <%= i*3+2 %>%; top: <%= 50 %>px;">
+			<span class="discipline-code">INF00000</span>
+			<br>
+			<span class="discipline-name">Nome da Cadeira</span>
+			<br>
+			<span class="discipline-difficulty">HARD-ish</span>
 		</div>
 	<% } %>
 	</div>

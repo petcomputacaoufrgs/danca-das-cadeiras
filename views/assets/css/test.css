@@ -1,0 +1,8 @@
+.discipline {
+	float: left;
+	display: inline-block;
+}
+
+body div p {
+	font-size: 0.6em;
+}

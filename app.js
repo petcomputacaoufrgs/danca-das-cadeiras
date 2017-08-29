@@ -22,6 +22,13 @@ app.get('/register', function(req, res){
 	res.render("register");
 });
 
+app.get('/test', function(req, res){
+	res.render("test");
+});
+
+
+
+
 app.get("*", function(req, res){
 	// do some funny image
 	res.send("This page doesn't exists!!!!!11!!11");
