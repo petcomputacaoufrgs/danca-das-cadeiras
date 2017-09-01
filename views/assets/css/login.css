@@ -53,7 +53,17 @@ body {
 	}
 
 	#cic-button, #ecp-button {
-		background-color: #910505; /*#2073CC;*/
+		background-color: #910505;
+		color: white;
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+	}
+
+	#cic-button:active, #ecp-button:active {
+		background-color: #810000;
 		color: white;
 	}
 

@@ -2,9 +2,13 @@ body {
 	background-color: #EDEDED;
 }
 
+.row {
+	width: 100%;
+}
+
 /* navbar related*/
 nav.navbar {
-	padding: 0 4%;
+	padding: 0 3%;
 	height: 56px; /*nav-height*/ /* every height-related property will have a comment at the side with *nav-height* marker */
 								 /* therefore, if you change this, change them aswell please*/
 	background-color: #262626;
