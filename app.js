@@ -22,13 +22,9 @@ app.get('/', function(req, res){
 });
 
 app.post('/login', function(req, res){
-	var email = req.body.email; 
-	var password = req.body.password;
-	var rememberMe = req.body.rememberMe; // "on" if box was checked, undefined otherwise
+	var login = req.body.login; // .rememberMe is "on" if box was checked, undefined otherwise
 
-	console.log("Email: " + email); // of course this is not staying
-	console.log("Password: " + password); // of course this is not staying
-	console.log("RM: " + rememberMe); // of course this is not staying
+	console.log(login);
 	res.send("heyyy");
 });
 
@@ -37,17 +33,13 @@ app.get('/register', function(req, res){
 });
 
 app.post('/register', function(req, res){
-	var name = req.body.username,
-		email = req.body.email,
-		password = req.body.password,
-		course = req.body.course,
-		internship = req.body.internship;
+	var registerData = req.body.registerData;
 	
-	console.log("name: " + name);
-	console.log("email: " + email);
-	console.log("password: " + password);
-	console.log("course: " + course);
-	console.log("internship: " + internship);	
+	console.log("name: " + registerData.username);
+	console.log("email: " + registerData.email);
+	console.log("password: " + registerData.password);
+	console.log("course: " + registerData.course);
+	console.log("internship: " + registerData.internship);	
 
 	res.redirect("/");
 });
