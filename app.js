@@ -1,7 +1,10 @@
-var express 	= require("express"),
-	app 		= express(),
-	bodyParser 	= require("body-parser"),
-	passport 	= require("passport");
+var express 		  = require("express"),
+app 				  = express(),
+bodyParser 			  = require("body-parser"),
+mongoose 			  = require("mongoose"),
+passport 			  = require("passport"),
+passportLocal 		  = require("passport-local"),
+passportLocalMongoose = require("passport-local-mongoose");
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -18,9 +21,43 @@ app.get('/', function(req, res){
 	res.render("login");
 });
 
+app.post('/login', function(req, res){
+	var login = req.body.login; // .rememberMe is "on" if box was checked, undefined otherwise
+
+	console.log(login);
+	res.send("heyyy");
+});
+
 app.get('/register', function(req, res){
 	res.render("register");
 });
+
+app.post('/register', function(req, res){
+	var registerData = req.body.registerData;
+	
+	console.log("name: " + registerData.username);
+	console.log("email: " + registerData.email);
+	console.log("password: " + registerData.password);
+	console.log("course: " + registerData.course);
+	console.log("internship: " + registerData.internship);	
+
+	res.redirect("/");
+});
+
+
+app.get("/forgot_password", function(req, res){
+	
+});
+
+
+app.post("/forgot_password", function(req, res){
+	var email = req.body.email;
+
+});
+
+
+
+
 
 app.get("*", function(req, res){
 	// do some funny image

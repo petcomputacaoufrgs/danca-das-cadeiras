@@ -17,14 +17,14 @@
 				<form action="/login" method="POST">
 					<div class="form-group">
 						<p>Entrar na sua conta:</p>
-						<input type="email" id="user-email"  class="form-control" placeholder= "Email" required>
+						<input type="email" name="login[email]" id="user-email" class="form-control" placeholder= "Email" required>
 					</div>
 					<div class="form-group">
-						<input type="password" id="user-password" class="form-control" placeholder="Senha" required>
+						<input type="password" name="login[password]" id="user-password" class="form-control" placeholder="Senha" required>
 					</div>
 					<div class="form-group">
 					<label>
-						<input type="checkbox" name="rememberMe" id="remember-me">
+						<input type="checkbox" name="login[rememberMe]" id="remember-me">
 						Manter conectado
 					</label>
 					</div>

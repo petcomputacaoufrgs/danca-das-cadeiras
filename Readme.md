@@ -5,7 +5,11 @@ To start using install packages where:
 	package_name = {
 		express,
 		body-parser,		
-		ejs			
+		ejs,
+		mongoose,
+		passport,
+		passport-local,
+		passport-local-mongoose			
 	}
 
 
