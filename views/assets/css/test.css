@@ -1,18 +1,24 @@
 .discipline {
 	float: left;
 	display: inline-block;
+	text-align: center;
 }
 
-body div p {
-	font-size: 0.6em;
+p.discipline-name {
+	margin: 0;
+    white-space: normal;
 }
 
-.canvas {
+.canvas-outer {
 	overflow: scroll; 
-	width: 500px; 
-	height: 210px;
+	width: 100%; 
+	height: 500px;
 }
 
 .canvas-inner {
-	width: 10000px;
+	width: 3000px;
+}
+
+div.discipline-centralize{
+	/*centraliza verticalmente*/
 }
