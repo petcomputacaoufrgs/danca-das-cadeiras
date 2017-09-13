@@ -1,7 +1,7 @@
 var canvasOuter = $('div.canvas-outer');
 var canvasInner = $('div.canvas-inner');
 var zoomValue = 1;
-var zoomSpeed = .15;
+var zoomSpeed = .035;
 
 function getScale(){
 	return Number(canvasOuter.css('width').split('px')[0])/Number(canvasInner.css('width').split('px')[0]);
