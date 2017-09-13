@@ -1,7 +1,14 @@
+.row {
+	
+	display: relative;
+	border-spacing: 15px;
+}
+
 .discipline {
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
+	margin-right: 20px;
 }
 
 p.discipline-name {
@@ -16,6 +23,7 @@ p.discipline-name {
 }
 
 .canvas-inner {
+	position: relative;
 	width: 3000px;
 }
 
