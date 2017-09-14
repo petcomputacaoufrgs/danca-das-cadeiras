@@ -1,13 +1,38 @@
-#logo-inf, #logo-pet{
+#logo-inf{
 	width: 100px;
 	height: 69px;
+	float: left;
+}
+
+#logo-pet{
+	float: right;
+	width: 100px;
+	height: 69px;
+}
+
+#creators-name a,#creators-name a:hover{
+	font-size: 1.0em;
+	color: rgb(170, 170, 170);
+	border-right: 2px solid rgba(170, 170, 170, 0.6);
+	padding-left: 3px;
+	padding-right: 8px;
+}
+
+span#creators-name{
+	display: inline-block;
+	margin-top: 25px;
+}
+
+a#last-creator{
+	border-right: 0 !important;
 }
 
 .footer {
 	background-color: #444;
 	position: absolute;
-  	right: 0;
+	right: 0;
   	bottom: 0;
   	left: 0;
   	padding: 4px 2%;
+  	text-align: center;
 }
