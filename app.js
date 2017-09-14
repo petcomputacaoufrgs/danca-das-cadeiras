@@ -23,7 +23,7 @@ app.get('/register', function(req, res){
 });
 
 app.get('/test', function(req, res){
-	res.render("test");
+	res.render("partials/discipline_selector");
 });
 
 

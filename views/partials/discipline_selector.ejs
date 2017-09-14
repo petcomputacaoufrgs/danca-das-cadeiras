@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/test.css">
+	<link rel="stylesheet" type="text/css" href="css/discipline_selector.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<title>Test</title>
 </head>
@@ -12,6 +12,7 @@
 		<% for(var j=0; j < 2; j++){ %>
 			<div class="row">
 			<% for(var i=0; i < 5; i++){ %>
+				<div class="blankspace"></div>
 				<div class="discipline btn btn-primary btn-lg" style="width: <%= 300 %>px; height: 150px;">
 					<div class="discipline-centralize">
 						<span class="discipline-code">INF01121</span>
@@ -27,6 +28,7 @@
 		<% } %>
 		<!-- diff one -> delete -->
 			<div class="row">
+				<div class="blankspace"></div>
 				<div class="discipline btn btn-primary btn-lg" style=" width: <%= 300 %>px; height: 150px;">
 					<span class="discipline-code">FIS01181</span>
 					<br>
@@ -39,6 +41,6 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="scripts/test.js"></script>
+	<script type="text/javascript" src="scripts/discipline_selector.js"></script>
 </body>
 </html>
