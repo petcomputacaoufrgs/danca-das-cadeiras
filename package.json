@@ -18,7 +18,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/Caio_Rodrigues/danca-das-cadeiras#readme",
   "dependencies": {
-    "body-parser": "^1.17.2",
+    "body-parser": "^1.18.1",
     "ejs": "^2.5.7",
     "express": "^4.15.4"
   }
