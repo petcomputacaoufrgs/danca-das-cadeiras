@@ -1,10 +1,12 @@
 var express 		  = require("express"),
 app 				  = express(),
-bodyParser 			  = require("body-parser"),
-mongoose 			  = require("mongoose"),
-passport 			  = require("passport"),
-passportLocal 		  = require("passport-local"),
-passportLocalMongoose = require("passport-local-mongoose");
+bodyParser 			  = require("body-parser");//,
+//mongoose 			  = require("mongoose"),
+//passport 			  = require("passport"),
+//passportLocal 		  = require("passport-local"),
+//passportLocalMongoose = require("passport-local-mongoose");
+
+var validation = require("./models/utils/validation.js");
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -35,6 +37,8 @@ app.get('/register', function(req, res){
 app.post('/register', function(req, res){
 	var registerData = req.body.registerData;
 	
+	
+
 	console.log("name: " + registerData.username);
 	console.log("email: " + registerData.email);
 	console.log("password: " + registerData.password);

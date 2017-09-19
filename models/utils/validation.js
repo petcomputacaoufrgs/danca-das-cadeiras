@@ -27,4 +27,11 @@ function isValidInput(input, allowedCharacters, type){
 	return true;
 }
 
-module.exports = isValidInput; // makes method avaliable for other functions
+
+// validateAllInputs: Object -> Boolean
+// validate all fields in Inputs based on the isValidInput function
+function validateAllInputs(userData){
+	userData.fields here
+}
+
+module.exports = {isValidInput, }; // makes method avaliable for other functions
