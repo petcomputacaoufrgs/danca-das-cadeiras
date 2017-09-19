@@ -6,6 +6,7 @@ bodyParser 			  = require("body-parser");//,
 //passportLocal 		  = require("passport-local"),
 //passportLocalMongoose = require("passport-local-mongoose");
 
+// utils
 var validation = require("./models/utils/validation.js");
 
 
@@ -36,7 +37,6 @@ app.get('/register', function(req, res){
 
 app.post('/register', function(req, res){
 	var registerData = req.body.registerData;
-	
 	
 
 	console.log("name: " + registerData.username);
