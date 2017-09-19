@@ -26,3 +26,5 @@ function isValidInput(input, allowedCharacters, type){
 	}
 	return true;
 }
+
+module.exports = isValidInput; // makes method avaliable for other functions
