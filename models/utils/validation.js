@@ -18,7 +18,6 @@ function isValidInput(input, allowedCharacters, type){
 	if(input.length == 0)
 		return false;
 
-
 	switch(type){
 		
 		case "course": //if type is a course, checks if it is on the available courses
