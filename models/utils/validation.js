@@ -8,8 +8,10 @@ var Courses = globals.Courses;
 	// input: String to be validated
 	// allowedCharacters: String with special characters that are allowed in input
 	// [type]: String containing the type of input.
-	//             If it is an email, removes everything from @ onwards and validating the rest
-	//              
+	//			 if type is "course", "email" or "internship" it recieves special treatment
+	//           	if it is "email", removes everything from @ onwards and validates the rest
+	//				if it is "course", it checks if the provided course input is on the Courses global list
+	//              if it is "internship", it checks if the input contains just numbers
 // returns true if input is valid, false otherwise
 function isValidInput(input, allowedCharacters, type){
 	input = input.toLowerCase();
@@ -20,20 +22,20 @@ function isValidInput(input, allowedCharacters, type){
 
 	switch(type){
 
-	case "course": //If it's a course, checks if it is on the available courses
-		return Courses.includes(input);
-
-	case "internship":
-		//Some code
+		case "course": //if type is a course, checks if it is on the available courses
+			return Courses.includes(input);
 		break;
 
-	case "email": //If it's an email, takes out the part before @
-		input = input.split('@')[0];
+		case "internship": // if type is
+			for(let i in input)
+				if(input[i] < '0' || input[i] > '9')
+					return false;
+			return true;
 		break;
 
-
-
-		
+		case "email": //if type is an email, takes out the part before @
+			input = input.split('@')[0];
+		break;
 	}
 
 	//Basic treatment for checking if the characters are allowed
@@ -55,11 +57,12 @@ function isValidInput(input, allowedCharacters, type){
 // validateAllInputs: Object -> Boolean
 // validate all fields in Inputs based on the isValidInput function
 function validateAllInputs(userData){
-	for(var Data in userData)
-		// If input is not valid, returns false
-		if(isValidInput(userData[Data], AllowedCharacters[Data], Data) == false)
+	// If any input is not valid, returns false
+	// in each loop the key variable recieves one of the keys in the userData object
+	// AllowedCharacters is made on purpose so that the same key access data related to userData[key] 
+	for(let key in userData)
+		if(isValidInput(userData[key], AllowedCharacters[key], key) === false) 
 			return false;
-
 
 	return true;
 }
