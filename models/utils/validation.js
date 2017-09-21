@@ -1,5 +1,5 @@
 var globals = require('../../globals');
-var AllowedCharacters = globals.AllowedCharacters,
+var AllowedCharacters = globals.AllowedCharacters;
 var Courses = globals.Courses;
 // isValidInput: String String [String] -> Boolean
 // Given an input, a string of allowedcharacters and possibly a type, checks if
@@ -14,14 +14,13 @@ var Courses = globals.Courses;
 	//              if it is "internship", it checks if the input contains just numbers
 // returns true if input is valid, false otherwise
 function isValidInput(input, allowedCharacters, type){
-	input = input.toLowerCase();
 
 	if(input.length == 0)
 		return false;
 
 
 	switch(type){
-
+		
 		case "course": //if type is a course, checks if it is on the available courses
 			return Courses.includes(input);
 		break;
@@ -37,6 +36,8 @@ function isValidInput(input, allowedCharacters, type){
 			input = input.split('@')[0];
 		break;
 	}
+
+	input = input.toLowerCase();
 
 	//Basic treatment for checking if the characters are allowed
 	for(let i in input){
@@ -61,8 +62,11 @@ function validateAllInputs(userData){
 	// in each loop the key variable recieves one of the keys in the userData object
 	// AllowedCharacters is made on purpose so that the same key access data related to userData[key] 
 	for(let key in userData)
-		if(isValidInput(userData[key], AllowedCharacters[key], key) === false) 
+		if(isValidInput(userData[key], AllowedCharacters[key], key) === false){
+			console.log("False -> " + key);
 			return false;
+
+		}
 
 	return true;
 }

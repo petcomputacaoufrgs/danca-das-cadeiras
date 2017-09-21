@@ -38,18 +38,15 @@ app.get('/register', function(req, res){
 app.post('/register', function(req, res){
 	var registerData = req.body.registerData;
 	
-	if(validation.validateAllInputs(registerData))
+	if(validation.validateAllInputs(registerData)){
+		console.log("Valid input");
 		console.log(registerData);
 		//register on the backend
-	else
+	}else{
+		console.log("Invalid input");
 		console.log(registerData);
 		//redirect to a "invalid information page"
-
-	console.log("name: " + registerData.username);
-	console.log("email: " + registerData.email);
-	console.log("password: " + registerData.password);
-	console.log("course: " + registerData.course);
-	console.log("internship: " + registerData.internship);	
+	}
 
 	res.redirect("/");
 });
