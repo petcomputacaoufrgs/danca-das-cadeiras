@@ -10,6 +10,9 @@ bodyParser 			  = require("body-parser");//,
 var validation = require("./models/utils/validation.js");
 
 
+// globals
+var globals = require("./globals.js");
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 // tells express to look for things in the public folder aswell
@@ -32,7 +35,7 @@ app.post('/login', function(req, res){
 });
 
 app.get('/register', function(req, res){
-	res.render("register");
+	res.render("register", {AllowedCharacters:globals.AllowedCharacters, Courses:globals.Courses});
 });
 
 app.post('/register', function(req, res){

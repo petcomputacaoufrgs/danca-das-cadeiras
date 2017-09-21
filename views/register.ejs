@@ -24,25 +24,26 @@
 				<div class="form-group">
 					<input type="text" id="user-name" name="registerData[username]" class="form-control" placeholder="Nome Completo" required>
 					<div class="alert alert-danger" id="invalid-name">
-						Nome de usuário inválido. É permitido usar apenas letras de a-z, A-Z, numeros de 0-9, e os caracteres <span id="username-special-characters"></span>
+						Nome de usuário inválido. É permitido usar apenas letras de a-z, A-Z, numeros de 0-9, e os caracteres <span id="username-special-characters"><%= AllowedCharacters.username %></span>
 					</div>
 				</div>
 				<div class="form-group">
 					<input type="email" id="user-email" name="registerData[email]"  class="form-control" placeholder= "Endereço de Email" required>
 					<div class="alert alert-danger" id="invalid-email">
-						Email inválido. É permitido usar apenas letras de a-z, A-Z, numeros de 0-9, e os caracteres <span id="email-special-characters"></span>
+						Email inválido. É permitido usar apenas letras de a-z, A-Z, numeros de 0-9, e os caracteres <span id="email-special-characters"><%= AllowedCharacters.email %></span>
 					</div>
 				</div>
 				<div class="form-group">
 					<input type="password" id="user-password" name="registerData[password]" class="form-control" placeholder="Senha (6-30 dígitos)"  pattern=".{6,30}" title="Password must be between 6 and 30 characters" required>
 					<div class="alert alert-danger" id="invalid-password">
-						Senha inválida. É permitido usar apenas letras de a-z, A-Z, numeros de 0-9, e os caracteres <span id="password-special-characters"></span>
+						Senha inválida. É permitido usar apenas letras de a-z, A-Z, numeros de 0-9, e os caracteres <span id="password-special-characters"><%= AllowedCharacters.password %></span>
 					</div>
 				</div>
 				<div class="form-group">
 					<select id="course-selector" class="custom-select" name="registerData[course]">
-						<option>Ciência da Computação</option>
-						<option>Engenharia da Computação</option>
+						<% Courses.forEach(function(course){ %>
+							<option><%= course %></option>
+						<% }); %>
 					</select>
 				</div>
 				<div class="form-group">

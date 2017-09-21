@@ -1,10 +1,10 @@
-var usernameAllowedCharacters = ".-_",
-	emailAllowedCharacters = ".-_",
-	passwordAllowedCharacters = ".-_!@#$&";
+var AllowedCharacters = {
+	"username": $('#username-special-characters').text(),
+	"email": $('#email-special-characters').text(),
+	"password": $('#password-special-characters').text()
+};
 // puts the special allowed caracters in the warning message of its respective input
-$('#username-special-characters').text(usernameAllowedCharacters); 
-$('#email-special-characters').text(emailAllowedCharacters);
-$('#password-special-characters').text(passwordAllowedCharacters);
+
 
 $(document).ready(function(){ // when the rendered html fully loads
 
@@ -17,21 +17,21 @@ $(document).ready(function(){ // when the rendered html fully loads
 
 		var invalidInput = false;
 
-		if(isValidInput(username, usernameAllowedCharacters))
+		if(isValidInput(username, AllowedCharacters["username"]))
 			$("#invalid-name").css('display', 'none'); // hides warning
 		else{
 			$("#invalid-name").css('display', 'block'); // shows warning
 			invalidInput = true;
 		}
 
-		if(isValidInput(email, emailAllowedCharacters, "email"))
+		if(isValidInput(email, AllowedCharacters["email"], "email"))
 			$("#invalid-email").css('display', 'none');
 		else{
 			$("#invalid-email").css('display', 'block');
 			invalidInput = true;
 		}
 
-		if(isValidInput(password, passwordAllowedCharacters))
+		if(isValidInput(password, AllowedCharacters["password"]))
 			$("#invalid-password").css('display', 'none');
 		else{
 			$("#invalid-password").css('display', 'block');

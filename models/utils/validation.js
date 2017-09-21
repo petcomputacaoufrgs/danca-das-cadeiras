@@ -62,7 +62,7 @@ function validateAllInputs(userData){
 	// AllowedCharacters is made on purpose so that the same key access data related to userData[key] 
 	for(let key in userData)
 		if(isValidInput(userData[key], AllowedCharacters[key], key) === false){
-			console.log("False -> " + key);
+			
 			return false;
 
 		}
