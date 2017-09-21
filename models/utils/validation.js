@@ -32,7 +32,8 @@ function isValidInput(input, allowedCharacters, type){
 		break;
 
 		case "email": //if type is an email, takes out the part before @
-			input = input.split('@')[0];
+			let email = input.split('@');
+			input = email[0] + email[1]; // removes the @
 		break;
 	}
 
@@ -61,12 +62,9 @@ function validateAllInputs(userData){
 	// in each loop the key variable recieves one of the keys in the userData object
 	// AllowedCharacters is made on purpose so that the same key access data related to userData[key] 
 	for(let key in userData)
-		if(isValidInput(userData[key], AllowedCharacters[key], key) === false){
-			
+		if(isValidInput(userData[key], AllowedCharacters[key], key) === false)
 			return false;
-
-		}
-
+	// if none of the userData was invalid returns true
 	return true;
 }
 
