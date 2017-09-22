@@ -3,6 +3,7 @@ var express 	= require("express"),
 	bodyParser 	= require("body-parser"),
 	passport 	= require("passport");
 
+var positions = require("./models/utils/position_generator.js").positions;
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -23,7 +24,7 @@ app.get('/register', function(req, res){
 });
 
 app.get('/test', function(req, res){
-	res.render("partials/discipline_selector");
+	res.render("partials/discipline_selector", {positions: positions});
 });
 
 

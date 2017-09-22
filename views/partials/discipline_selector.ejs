@@ -9,10 +9,11 @@
 <body>
 	<div class="canvas-outer">
 		<div class="canvas-inner">
-		<% for(var j=0; j < 2; j++){ %>
+		<% for(var j=0; j < positions.length; j++){ %>
+			<div class="blankspace"></div>
 			<div class="row">
-			<% for(var i=0; i < 5; i++){ %>
-				<div class="discipline btn btn-primary btn-lg" style="width: <%= 300 %>px; height: 150px; position: absolute; top: 0; left: <%= 20+320*i %>px;">
+			<% for(var i=0; i < positions[j].length; i++){ %>
+				<div class="discipline btn btn-primary btn-lg" style="width: <%= 300 %>px; height: 150px; position: absolute; top: 0; left: <%= positions[j][i] %>px;">
 					<div class="discipline-centralize">
 						<span class="discipline-code">INF01121</span>
 						<br>
