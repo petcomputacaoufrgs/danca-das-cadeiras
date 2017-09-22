@@ -8,6 +8,7 @@ $.prototype.containsClasses = function(){
 		return undefined;
 
 	var classes = $(this).attr("class").split(' ');
+
 	for(var j = 0; j < classNames.length; j++){
 		var found = false;
 		for(var i = 0; i < classes.length; i++) 
