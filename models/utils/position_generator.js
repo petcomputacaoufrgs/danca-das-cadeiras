@@ -28,3 +28,5 @@ allDisciplines.forEach(function(semesterDisciplines, semester){
 		positions[semester][index] = (index + desloc)*disciplineWidth + constant;//if there is any constant, test later
 	});
 });
+
+module.exports = {positions};
