@@ -3,7 +3,7 @@ var express 	= require("express"),
 	bodyParser 	= require("body-parser"),
 	passport 	= require("passport");
 
-var positions = require("./models/utils/position_generator.js").positions;
+var Course = require("./models/Course");
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -24,7 +24,15 @@ app.get('/register', function(req, res){
 });
 
 app.get('/test', function(req, res){
-	res.render("partials/discipline_selector", {positions: positions});
+	var course = new Course();
+	// here will be a database function that given the name of a course 
+	// (must be the same as the pattern in the backend) returns the whole course
+	course.fetchData("Ciência da Computação");
+	course = course.createInterfaceCourse();
+
+	console.log(course);
+
+	res.render("partials/discipline_selector", {course: course});
 });
 
 
