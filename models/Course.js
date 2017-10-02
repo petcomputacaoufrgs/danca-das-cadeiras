@@ -9,8 +9,8 @@ class Course{
 }
 
 Course.prototype.fetchData = function(courseName) {
-	// based on the course name should fill the Course with the correct disciplines
 	this.name = courseName;
+	// based on the course name should fill the Course with the correct disciplines #toCaio
 	let fakedata = {code:"INF01234", name:"Uma cadeira", professors:["Eu", "Você", "Zubumafu"], dificulty:[1, 4, 100], credits:4};
 	this.disciplines.push([fakedata, fakedata, fakedata, fakedata]);
 	this.disciplines.push([fakedata, fakedata, fakedata, fakedata, fakedata, fakedata]);
