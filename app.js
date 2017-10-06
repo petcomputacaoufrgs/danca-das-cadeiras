@@ -6,12 +6,16 @@ bodyParser 			  = require("body-parser");//,
 //passportLocal 		  = require("passport-local"),
 //passportLocalMongoose = require("passport-local-mongoose");
 
+
 // utils
 var validation = require("./models/utils/validation.js");
 
 
 // globals
 var globals = require("./globals.js");
+
+var Course = require("./models/Course");
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -37,6 +41,7 @@ app.post('/login', function(req, res){
 app.get('/register', function(req, res){
 	res.render("register", {AllowedCharacters:globals.AllowedCharacters, Courses:globals.Courses});
 });
+
 
 app.post('/register', function(req, res){
 	var registerData = req.body.registerData;
@@ -66,7 +71,20 @@ app.post("/forgot_password", function(req, res){
 });
 
 
+app.get('/test', function(req, res){
+	res.render("partials/discipline_selector");
+});
 
+app.get('/course/:id', function(req, res){
+	var course = new Course();
+	// here will be a database function that given the name of a course 
+	// (must be the same as the pattern in the backend) returns the whole course
+	course.fetchData("Ciência da Computação");
+
+	res.send(course.createInterfaceCourse());
+
+
+});
 
 
 app.get("*", function(req, res){
