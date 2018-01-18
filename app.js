@@ -1,11 +1,12 @@
 var express 		  = require("express"),
 app 				  = express(),
 bodyParser 			  = require("body-parser");//,
-//mongoose 			  = require("mongoose"),
+mongoose 			  = require("mongoose"),
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://localhost/Chair_Dance", { useMongoClient: true });
 //passport 			  = require("passport"),
 //passportLocal 		  = require("passport-local"),
 //passportLocalMongoose = require("passport-local-mongoose");
-
 
 // utils
 var validation = require("./models/utils/validation.js");
@@ -16,6 +17,7 @@ var globals = require("./globals.js");
 
 var Course = require("./models/Course");
 
+var updater = require("./models/utils/database_updater")
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -92,6 +94,30 @@ app.get("*", function(req, res){
 	res.send("This page doesn't exists!!!!!11!!11");
 });
 
+
+
+
+//Here begins the database
+
+var disciplineSchema = new mongoose.Schema({
+	code: String,
+	semester: Number,
+	credits: Number,
+	tests: Number,
+	testsDates: [{testDate:Number}],
+	assignments: Number,
+	assignmentsDates: [{assignmentDate:Number}],
+	requiredDisciplines: [{requiredDiscipline:String}]
+});
+
+
+
 app.listen(5000, 'localhost', function() {
 	console.log("Server Online");
+});
+
+var Course = new updater.Course();
+Course.readFiles("./models/utils/database_excel", function(err){
+	Course.updatedatabase();
+	
 });
